@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - VignAgri</title>
+    <link rel="stylesheet" href="interface.css">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+
+</head>
+
+<script>
+    // Quand la page est chargée
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".animate-right");
+
+        images.forEach((img, index) => {
+            // Décalage dans le temps entre chaque image
+            setTimeout(() => {
+                img.classList.add("visible");
+            }, index * 300); // 300ms de délai entre chaque
+        });
+    });
+</script>
+
+<body>
+    <header class="header-banner">
+        <nav>
+            <ul>
+                <li><h1><a href="index.html">Accueil</a></h1></li>
+                <li><h1><a href="services.html" class="active">Services</a></h1></li>
+                <li><h1><a href="partenaire.html">Partenaire</a></h1></li>
+                <li><h1><a href="contact.html">Contact</a></h1></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main class="services-container">
+		<div class="services-left">
+			<section>
+				<h1>Entretiens & réparations</h1>
+				<p>Nous effectuons les travaux en nos ateliers mais nous sommes également équipés pour venir dépanner chez vous.</p>
+			</section>
+
+			<section>
+				<h1>Diagnostics et services</h1>
+				<p>Nous disposons de personnel qualifié, toujours formé aux dernières spécificités de nos marques et équipé du matériel nécessaire au diagnostic de panne des machines.</p>
+			</section>
+
+			<section>
+				<h1>Vente</h1>
+				<p>La vente de pièces détachées se fait essentiellement au comptoir avec notre magasinier. La vente de matériel est assurée par Reus Laurent et Chamayou Julien afin de toujours vous conseiller dans vos choix.</p>
+			</section>
+		</div>
+
+		<div class="services-right">
+			<img src="images/1.jpg" alt="Entretiens" class="animate-right">
+			<img src="images/2.jpg" alt="Diagnostics" class="animate-right">
+			<img src="images/3.png" alt="Vente" class="animate-right">
+		</div>
+
+	</main>
+
+</body>
+</html>

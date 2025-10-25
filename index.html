@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VignAgri</title>
+    <link rel="stylesheet" href="interface.css">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+</head>
+
+<body>
+	<a href="https://www.leboncoin.fr/recherche?category=57&text=vignagri&locations=Gaillac_81600__43.90028_1.89737_5000&kst=k&pi=ddcb0d83-bd33-4532-8d3a-d9235473ca49" target="_blank" class="banner-image-container">
+		<img src="images/occasions.png" alt="Bannière Cliquable">
+	</a>
+
+	<header class="header-banner">
+	
+        <nav>
+            <ul>
+                <li><h1><a href="vignagri_site.html" class="active">Accueil</a></h1></li>
+                <li><h1><a href="services.html">Services</a></h1></li>
+                <li><h1><a href="partenaire.html">Partenaire</a></h1></li>
+                <li><h1><a href="contact.html">Contact</a></h1></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slideshow-container">
+            <div class="slides-wrapper">
+                <img class="mySlide" src="images/image1.jpg" alt="Machine à vendanger">
+                <img class="mySlide" src="images/image2.jpg" alt="vignes">
+                <img class="mySlide" src="images/image3.jpg" alt="vignes et machines">
+				<img class="mySlide" src="images/image4.jpg" alt="tracteur">
+				<img class="mySlide" src="images/image5.jpg" alt="matériel tracteur">
+            </div>
+        </div>
+
+        <div class="dots" id="dots-container"></div>
+
+        <div class="info-banner">
+            <div class="info-block">
+                <img src="images/1.jpg" alt="Réparations" />
+                <p>Réparations & entretiens</p>
+            </div>
+            <div class="info-block">
+                <img src="images/2.jpg" alt="Diagnostics" />
+                <p>Services & DIAGNOSTICS</p>
+            </div>
+            <div class="info-block">
+                <img src="images/3.png" alt="Vente" />
+                <p>Vente</p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <a href="https://www.google.fr/maps/place/Vignagri/@43.9270646,1.8981843,174m/data=!3m1!1e3!4m6!3m5!1s0x12add20857b2d74f:0xa29d5fdafd92ae47!8m2!3d43.9268951!4d1.8986419!16s%2Fg%2F1tfd99q5?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D"
+               target="_blank" class="map-image-link">
+                <img src="images/vue_aerienne.png" alt="Vue aérienne" class="map-image">
+            </a>
+
+            <div class="about-text">
+                <h3>À propos de notre entreprise</h3>
+                <p>
+                    La société Vignagri a été reprise en 2011 par Reus Laurent et Chamayou Julien.<br><br>
+                    Depuis cette reprise, la société n’a cessé de se développer.<br><br>
+                    Nous travaillons depuis de nombreuses années avec les mêmes marques et, dans un souci de toujours satisfaire nos clients, de nouveaux partenaires viennent régulièrement s’ajouter à notre éventail de choix de matériels et de pièces détachées.<br><br>
+                    Nous sommes à votre service pour toutes réparations mécaniques et à votre écoute pour toutes questions supplémentaires.
+                </p>
+            </div>
+        </div>
+		<div class="full-width-image">
+			<img src="images/Validé.png" alt="Image plein écran">
+		</div>
+		<br>
+
+    </main>
+
+    <script>
+        let slideIndex = 0;
+        let autoSlideInterval;
+        const slides = document.querySelectorAll('.mySlide');
+        const dotsContainer = document.getElementById('dots-container');
+
+        // Crée les dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                slideIndex = i;
+                showSlides();
+                resetAutoSlide();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            // Gestion du dépassement de bornes
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+
+            // Déplace le slide
+            document.querySelector('.slides-wrapper').style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            // Met à jour les dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[slideIndex].classList.add('active');
+        }
+
+        // Démarre ou redémarre le défilement automatique
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                slideIndex++;
+                showSlides();
+            }, 3000);
+        }
+
+        // Démarrage initial
+        showSlides();
+        resetAutoSlide();
+    </script>
+	
+	<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+	<script src="https://static.elfsight.com/platform/platform.js" async></script>
+	<div class="elfsight-app-403b1568-c04f-4c3a-9d5e-99da3e236d2d" data-elfsight-app-lazy></div>
+
+</body>
+</html>
