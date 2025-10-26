@@ -329,130 +329,144 @@ header nav ul li h1 a:hover {
 }
 
 
-/* 📱 Adaptation pour les écrans mobiles */
+/* 📱 Mode Mobile */
 @media (max-width: 768px) {
-    /* Menu de navigation : vertical ou simplifié */
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
 
+    /* 🔹 Header plus compact */
     header {
         height: auto;
-        padding: 10px;
         flex-direction: column;
-        align-items: center;
+        padding: 10px;
         text-align: center;
     }
 
-    /* Bannière info : en colonne */
-    .info-banner {
-        flex-direction: column;
-        align-items: center;
+    header h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
     }
 
-    .info-block {
+    /* 🔹 Menu en colonne */
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
         width: 100%;
+        border-radius: 0;
+        padding: 10px 0;
     }
 
-    /* À propos : passer en colonne */
-    .about-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 16px;
     }
 
-    .map-image-link,
-    .about-text {
-        max-width: 100%;
-    }
-
-    .about-text p {
-        font-size: 15px;
-        padding: 0 10px;
-    }
-
-    /* Slideshow : réduire la hauteur sur petit écran */
+    /* 🔹 Slideshow plus bas */
     .slideshow-container {
         height: 250px;
     }
 
-    .mySlide {
-        height: 250px;
+    /* 🔹 Banner info en colonne */
+    .info-banner {
+        flex-direction: column;
+        max-width: 95%;
+        gap: 15px;
     }
 
-    /* Réduction images info */
     .info-block img {
         width: 100px;
         height: 100px;
     }
 
-    /* Partenaire grid : moins de colonnes */
-    .partenaire-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .banner-image-container img {
-        max-height: 60px;
-    }
-
-    .about-text h3 {
-        font-size: 18px;
-    }
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-
-.services-left {
-    flex: 1 1 60%;
-}
-
-.services-right {
-    flex: 1 1 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.services-right img {
-    width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .services-container {
+    /* 🔹 Section à propos */
+    .about-section {
         flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
     }
 
-    .services-left,
-    .services-right {
+    .map-image-link {
+        max-width: 100%;
+    }
+
+    .about-text {
+        flex: unset;
         width: 100%;
     }
-}
 
+    /* 🔹 Grille partenaires → 2 colonnes */
+    .partenaire-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .partenaire-grid img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    /* 🔹 Contact */
+    .contact-container {
+        padding: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* Animation d'apparition depuis la droite */
 .animate-right {
     opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.8s ease-out;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Quand la classe visible est ajoutée par JS */
 .animate-right.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
+/* 📌 Mise en page Services : Texte à gauche + Images à droite */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
 
+.services-left {
+    flex: 1;
+}
+
+.services-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 📌 Images réduites de moitié */
+.services-right img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* 📱 Responsive mobile : tout en colonne, images centrées */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .services-right img {
+        width: 50%; /* + lisible sur téléphone */
+        margin: auto;
+    }
+}
