@@ -8,18 +8,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header class="header-banner">
-        <nav>
-            <ul>
-                <li><h1><a href="index.html">Accueil</a></h1></li>
-                <li><h1><a href="services.html">Services</a></h1></li>
-                <li><h1><a href="partenaire.html">Partenaire</a></h1></li>
-                <li><h1><a href="contact.html" class="active">Contact</a></h1></li>
-            </ul>
-        </nav>
-    </header>
+	<header class="header-banner">
+		<button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+
+		<nav>
+			<ul class="nav-links">
+			<li><h1><a href="index.html" >Accueil</a></h1></li>
+			<li><h1><a href="services.html">Services</a></h1></li>
+			<li><h1><a href="partenaire.html">Partenaire</a></h1></li>
+			<li><h1><a href="contact.html" class="active">Contact</a></h1></li>
+			<li><h1><a href="https://www.leboncoin.fr/recherche?category=56&text=vignagri&locations=Gaillac_81600__43.90028_1.89737_5000&owner_type=pro" target="_blank" >Nos Occasions</a></h1></li>
+			</ul>
+		</nav>
+	</header>
 
 	<main>
+		
 		<section class="contact-container">
 			<h1>Horaires :</h1>
 			<p>Du Lundi au Vendredi de 08:00–12:00 et de 14:00–18:00</p>
@@ -51,10 +55,17 @@
 		</section>
 
 	</main>
+	
+	<script> // navigations
+	  const menuToggle = document.querySelector('.menu-toggle');
+	  const navLinks = document.querySelector('.nav-links');
+
+	  menuToggle.addEventListener('click', () => {
+		navLinks.classList.toggle('open');
+	  });
+	</script>
 
 
 
 </body>
 </html>
-
-
