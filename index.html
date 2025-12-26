@@ -4,142 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VignAgri</title>
+	<meta name="description" content="Spécialiste du matériel agricole viticole et vinicole à gaillac dans le tarn, vente de matériel agricole d'occasion."/> 
     <link rel="stylesheet" href="interface.css">
+	<link rel="canonical" href="https://vignagri.fr/">
 	
-	<link rel="icon" type="image/png" href="images/logo2.png" sizes="32x32">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	
+	<link rel="icon" href="images/logo_principal.png" type="image/png">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/logo_principal.png">
 
 </head>
 
 <body>
 
-
-	<header class="header-banner">
-		<button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-
-		<nav>
-			<ul class="nav-links">
-			<li><h1><a href="index.html" class="active">Accueil</a></h1></li>
-			<li><h1><a href="services.html">Services</a></h1></li>
-			<li><h1><a href="partenaire.html">Partenaire</a></h1></li>
-			<li><h1><a href="contact.html">Contact</a></h1></li>
-			<li><h1><a href="https://www.leboncoin.fr/recherche?category=56&text=vignagri&locations=Gaillac_81600__43.90028_1.89737_5000&owner_type=pro" target="_blank" >Nos Occasions</a></h1></li>
-			</ul>
-		</nav>
-	</header>
-
-
-    <main>
-        <div class="slideshow-container">
-            <div class="slides-wrapper">
-                <img class="mySlide" src="images/image1.jpg" alt="Machine à vendanger">
-                <img class="mySlide" src="images/image2.jpg" alt="vignes">
-                <img class="mySlide" src="images/image3.jpg" alt="vignes et machines">
-				<img class="mySlide" src="images/image4.jpg" alt="tracteur">
-				<img class="mySlide" src="images/image5.jpg" alt="matériel tracteur">
+	<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-fluid">
+			<img src="images/logo_principal_transparent.png" alt="VignAgri logo" height="50">
+            <img src="images/banniere-fond-transparent.png" alt="VignAgri" height="50">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active text-primary" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partenaire.html">Partenaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-warning ms-lg-3" href="https://www.leboncoin.fr/recherche?category=56&text=vignagri&locations=Gaillac_81600__43.90028_1.89737_5000&owner_type=pro" target="_blank">Nos Occasions</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="dots" id="dots-container"></div>
+    <img src="images/VignAgri.png" class="w-100" alt="VignAgri Banner">
+	
+	<br>
+	
+	<h5 class="red">!! Votre magasin sera fermé pendant les congés de Noël, du 20/12/2025 au 04/01/2026. Nous vous souhaitons de très belles fêtes !!</h5>
 
-        <div class="info-banner">
-            <div class="info-block">
-                <img src="images/1.jpg" alt="Réparations" />
-                <p>Réparations & entretiens</p>
+    <div class="container">
+
+        <br><br>
+        
+        <div class="row g-4 justify-content-center text-center">
+            <div class="col-md-4 col-sm-6">
+				<a class="nav-link" href="services.html#reparation">
+					<div class="card h-100 custom-card shadow-sm">
+						<img src="images/1.jpg" class="card-img-top" alt="Réparations">
+						<div class="card-body">
+							<h5 class="card-title fw-bold">Montage hydraulique & confection flexible</h5>
+						</div>
+					</div>
+				</a>
             </div>
-            <div class="info-block">
-                <img src="images/2.jpg" alt="Diagnostics" />
-                <p>Services & DIAGNOSTICS</p>
+
+            <div class="col-md-4 col-sm-6">
+				<a class="nav-link" href="services.html#Service">
+					<div class="card h-100 custom-card shadow-sm">
+						<img src="images/2.jpg" class="card-img-top" alt="Diagnostics">
+						<div class="card-body">
+							<h5 class="card-title fw-bold">Réparations & Diagnostics</h5>
+						</div>
+					</div>
+				</a>
             </div>
-            <div class="info-block">
-                <img src="images/3.png" alt="Vente" />
-                <p>Vente</p>
+
+            <div class="col-md-4 col-sm-6">
+				<a class="nav-link" href="services.html#vente">
+					<div class="card h-100 custom-card shadow-sm">
+						<img src="images/3.png" class="card-img-top" alt="Vente">
+						<div class="card-body">
+							<h5 class="card-title fw-bold">Vente</h5>
+						</div>
+					</div>
+				</a>
             </div>
         </div>
+    </div>
 
-        <div class="about-section">
-            <a href="https://www.google.fr/maps/place/Vignagri/@43.9270646,1.8981843,174m/data=!3m1!1e3!4m6!3m5!1s0x12add20857b2d74f:0xa29d5fdafd92ae47!8m2!3d43.9268951!4d1.8986419!16s%2Fg%2F1tfd99q5?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank" class="map-image-link">
-                <img src="images/vue_aerienne.png" alt="Vue aérienne" class="map-image">
-            </a>
+    <br><br>
 
-            <div class="about-text">
-                <h3>À propos de notre entreprise</h3>
-                <p>
-                    La société Vignagri a été reprise en 2011 par Reus Laurent et Chamayou Julien.<br><br>
-                    Depuis cette reprise, la société n’a cessé de se développer.<br><br>
-                    Nous travaillons depuis de nombreuses années avec les mêmes marques et, dans un souci de toujours satisfaire nos clients, de nouveaux partenaires viennent régulièrement s’ajouter à notre éventail de choix de matériels et de pièces détachées.<br><br>
-                    Nous sommes à votre service pour toutes réparations mécaniques et à votre écoute pour toutes questions supplémentaires.
-                </p>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-5">
+                <div class="map-container shadow">
+                    <a href="https://www.google.fr/maps/place/Vignagri/@43.9270646,1.8981843,174m/data=!3m1!1e3!4m6!3m5!1s0x12add20857b2d74f:0xa29d5fdafd92ae47!8m2!3d43.9268951!4d1.8986419!16s%2Fg%2F1tfd99q5?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <img src="images/vue_aerienne.png" class="img-fluid rounded" alt="Vue aérienne">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-7">
+                <h2 class="fw-bold border-bottom pb-2">À propos de notre entreprise</h2>
+                <p>La société Vignagri a été reprise en 2011 par Reus Laurent et Chamayou Julien.</p>
+                <p>Depuis cette reprise, la société n’a cessé de se développer.</p>
+                <p>Nous travaillons depuis de nombreuses années avec les mêmes marques et, dans un souci de toujours satisfaire nos clients, de nouveaux partenaires viennent régulièrement s’ajouter à notre éventail de choix de matériels et de pièces détachées.</p>
+                <p>Nous sommes à votre service pour toutes <strong>réparations mécaniques</strong> et à votre écoute pour toutes questions supplémentaires.</p>
             </div>
         </div>
-		<div class="full-width-image">
-			<img src="images/Validé.png" alt="Image plein écran">
-		</div>
-		<br>
-
-    </main>
-
-    <script> //les images qui défilent
-        let slideIndex = 0;
-        let autoSlideInterval;
-        const slides = document.querySelectorAll('.mySlide');
-        const dotsContainer = document.getElementById('dots-container');
-
-        // Crée les dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            dot.addEventListener('click', () => {
-                slideIndex = i;
-                showSlides();
-                resetAutoSlide();
-            });
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function showSlides() {
-            // Gestion du dépassement de bornes
-            if (slideIndex >= slides.length) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = slides.length - 1;
-
-            // Déplace le slide
-            document.querySelector('.slides-wrapper').style.transform = `translateX(-${slideIndex * 100}%)`;
-
-            // Met à jour les dots
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[slideIndex].classList.add('active');
-        }
-
-        // Démarre ou redémarre le défilement automatique
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(() => {
-                slideIndex++;
-                showSlides();
-            }, 10000);
-        }
-
-        // Démarrage initial
-        showSlides();
-        resetAutoSlide();
-    </script>
-
-	<script> // navigations
-	  const menuToggle = document.querySelector('.menu-toggle');
-	  const navLinks = document.querySelector('.nav-links');
-
-	  menuToggle.addEventListener('click', () => {
-		navLinks.classList.toggle('open');
-	  });
-	</script>
-
+    </div>
+	
+	<br>
+	
+	<img src="images/Validé.png" class="w-100" alt="les avantages de VignAgri">
+	
+	<br><br>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-</html>
 
-
-
+</html> 
